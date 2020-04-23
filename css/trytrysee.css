@@ -1,3 +1,7 @@
-body {
-  background-image: url("img/ccc.jpg");
+.bgimg {
+  background-image: url("https://pbs.twimg.com/media/D4g6JvxUwAAETca?format=jpg&name=large");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 100% 0%;
+  background-size: 70vh;
 }
