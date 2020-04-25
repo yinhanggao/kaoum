@@ -5,3 +5,21 @@
   background-position: 100% 0%;
   background-size: 70vh;
 }
+.hwp {
+  height: 100vh;
+  width: 100vh;
+  margin: 70px;
+  padding-top: 70px;
+  /*--*/
+  background-color: #302e2e44;
+}
+.iid:hover {
+  border-radius: 16px;
+  transition: all 0.8s;
+  background-color: #000000af;
+}
+.iid:active {
+  border-radius: 16px;
+  transition: all 0.1s;
+  background-color: #eeeaeaa9;
+}
