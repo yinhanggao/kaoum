@@ -1,9 +1,21 @@
-.bgimg {
-  background-image: url("https://pbs.twimg.com/media/D4g6JvxUwAAETca?format=jpg&name=large");
+.bgimg1 {
+  background-color: #000000;
+}
+.bgimg2 {
+  background-color: #000000;
+}
+.bgimg3 {
+  background-color: #000000;
+}
+.bgimg4 {
+  background-color: #000000;
+}
+.bgset {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 100% 0%;
   background-size: 70vh;
+  height: 100vh;
 }
 .hwp {
   height: 100vh;
