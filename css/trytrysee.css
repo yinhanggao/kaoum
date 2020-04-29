@@ -7,11 +7,10 @@
   border-radius: 50px;
 }
 .hwp {
-  height: 100vh;
-  /*width: 100vh;*/
-  margin: 65px;
+  margin: 0px auto;
   padding-top: 70px;
-  /*--*/
+  height: 100vh;
+  width: 100vh;
 }
 .iid:hover {
   border-radius: 16px;
@@ -22,4 +21,11 @@
   border-radius: 16px;
   transition: all 0.1s;
   background-color: #eeeaeaa9;
+}
+
+.hwp {
+  margin: 0px auto;
+  padding-top: 70px;
+  height: 100vh;
+  width: 100vh;
 }
