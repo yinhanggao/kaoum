@@ -1,29 +1,17 @@
-.bgimg1 {
-  background-color: #000000;
-}
-.bgimg2 {
-  background-color: #000000;
-}
-.bgimg3 {
-  background-color: #000000;
-}
-.bgimg4 {
-  background-color: #000000;
-}
-.bgset {
+.bgimg {
+  background-image: url("https://images.pexels.com/photos/3907280/pexels-photo-3907280.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 100% 0%;
-  background-size: 70vh;
-  height: 100vh;
+  background-position: 50% 50%;
+  background-size: 200vh;
+  border-radius: 50px;
 }
 .hwp {
   height: 100vh;
-  width: 100vh;
-  margin: 70px;
+  /*width: 100vh;*/
+  margin: 65px;
   padding-top: 70px;
   /*--*/
-  background-color: #302e2e44;
 }
 .iid:hover {
   border-radius: 16px;
