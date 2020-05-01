@@ -1,31 +1,44 @@
-.bgimg {
-  background-image: url("https://images.pexels.com/photos/3907280/pexels-photo-3907280.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: 200vh;
-  border-radius: 50px;
+/* ------- header ------- */
+.header {
+  height: calc(100vh);
+  text-align: center;
 }
-.hwp {
-  margin: 0px auto;
-  padding-top: 70px;
+.header .bg {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: url("https://pbs.twimg.com/media/D4g6JvxUwAAETca?format=jpg&name=large")
+    no-repeat center center;
+  background-size: 40% auto;
+}
+/* ------- main ------- */
+.main {
+  z-index: 2;
+  margin-bottom: 400px;
+  background: rgb(248, 113, 113);
+  padding-top: 50px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgb(228, 214, 26);
+  box-shadow: 0px 5px 5px 0px rgba(76, 15, 243, 0.651);
+  z-index: 10;
+}
+.link0 {
+  text-align: center;
+  padding: 0;
   height: 100vh;
-  width: 100vh;
+  background-color: springgreen;
 }
-.iid:hover {
-  border-radius: 16px;
-  transition: all 0.8s;
-  background-color: #000000af;
-}
-.iid:active {
-  border-radius: 16px;
-  transition: all 0.1s;
-  background-color: #eeeaeaa9;
-}
-
-.hwp {
-  margin: 0px auto;
-  padding-top: 70px;
+.link1 {
+  text-align: center;
+  padding: 0;
   height: 100vh;
-  width: 100vh;
+  background-color: slateblue;
+}
+.link2 {
+  text-align: center;
+  padding: 0;
+  height: 100vh;
+  background-color: coral;
+}
+/* ------- footer ------- */
+.footer {
 }
