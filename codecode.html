@@ -32,17 +32,24 @@
         width: 100%;
         margin: 10px;
       }
+      #runinin {
+        background: white;
+        border: none;
+        margin: 10px;
+        border: 1px solid red;
+      }
     </style>
   </head>
   <body>
     <div class="main">
-      <textarea id="edtext" onkeyup="runcode()">
-<!DOCTYPE html>
+      <textarea id="edtext">
+ 
+        <!DOCTYPE html>
         <html lang="zh-Hant-TW">
           <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>KAOÜM</title>
+            <title>KAOUM</title>
             <!-- Latest compiled and minified CSS -->
             <link
               rel="stylesheet"
@@ -98,8 +105,6 @@
           background-color: coral;
         }
         /* ------- footer ------- */
-        .footer {
-        }
         
             </style>
             <script>
@@ -130,7 +135,7 @@
           <body >
             <div class="sticky-top">
               <nav id="navbarr"class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-lg-around">
-                <a class="navbar-brand" href="#home">KAOÜM</a>
+                <a class="navbar-brand" href="#home">KAOUM</a>
                 <!-- Links -->
                   <ul class="navbar-nav">
                     <li class="nav-item iid">
@@ -172,6 +177,7 @@
         </html>
         </textarea
       >
+      <button onclick="runcode()" id="runinin">預覽畫面</button>
       <iframe id="showtext"></iframe>
     </div>
   </body>
