@@ -18,3 +18,14 @@ $(function () {
     } // if end
   }); // click end
 });
+document.addEventListener(
+  "wheel",
+  () => {
+    if (window.scrollY > 50) {
+      document.querySelector(".navannn").classList.add("sticky-top");
+    } else {
+      document.querySelector(".navannn").classList.remove("sticky-top");
+    }
+  },
+  { capture: false, passive: true }
+);
