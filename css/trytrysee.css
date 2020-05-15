@@ -17,10 +17,8 @@
   z-index: 1;
 }
 .bgdivsize {
-  width: 50%;
-  height: 50%;
   margin: 0 auto;
-  padding-top: 20%;
+  padding: 5%;
 }
 .navannn {
   -webkit-transition: all 0.4s;
