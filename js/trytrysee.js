@@ -21,7 +21,7 @@ $(function () {
 document.addEventListener(
   "wheel",
   () => {
-    if (window.scrollY) {
+    if (window.scrollY > 1) {
       document.querySelector(".navannn").classList.add("sticky-top");
     } else {
       document.querySelector(".navannn").classList.remove("sticky-top");
