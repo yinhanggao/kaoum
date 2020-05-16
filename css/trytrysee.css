@@ -3,6 +3,9 @@
   height: 50vh;
   text-align: center;
 }
+.kaoum {
+  color: #5c5c5cfa;
+}
 .header .bg {
   width: 50%;
   height: 50%;
@@ -24,7 +27,7 @@
 }
 /* ------- main ------- */
 .main {
-  margin-bottom: 400px;
+  width: 80%;
   background: rgba(255, 255, 255, 0);
   padding-top: 10px;
   margin: auto;
@@ -32,6 +35,7 @@
 .flexxx {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   /*flex-wrap: wrap;*/
 }
@@ -39,20 +43,22 @@
   text-align: center;
   padding: 0;
   height: auto;
-  background-color: rgb(144, 241, 193);
+  background-color: rgb(253, 206, 255);
+  border: solid 1px black;
 }
 .link1 {
   text-align: center;
   padding: 0;
   height: auto;
-  background-color: rgb(178, 167, 248);
+  background-color: rgb(189, 215, 250);
 }
 .link2 {
   text-align: center;
   padding: 0;
   height: auto;
-  background-color: rgb(247, 194, 175);
+  background-color: rgb(250, 243, 176);
 }
 /* ------- footer ------- */
 .footer {
 }
+/*--------*/

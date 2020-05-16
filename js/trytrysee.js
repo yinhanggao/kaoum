@@ -29,3 +29,11 @@ document.addEventListener(
   },
   { capture: false, passive: true }
 );
+window.onload = function () {
+  new TypeIt("#titleetypeit", {
+    strings: "KAOÜM",
+    speed: 500,
+    waitUntilVisible: true,
+    loop: true,
+  }).go();
+};
