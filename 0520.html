@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kaoum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .top {
+        background-color: rgb(236, 236, 236);
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .toptotop {
+        align-self: center;
+        color: rgb(99, 99, 99);
+      }
+      .navbar {
+        background-color: rgb(255, 255, 255);
+        height: 30px;
+        text-align: center;
+        box-shadow: 0px 0px 5px 2px rgb(136, 134, 134);
+      }
+      .navbar a {
+        color: rgb(145, 145, 145);
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 50px;
+        line-height: 1.3;
+        transition: 0.5s;
+      }
+      .navbar a:hover {
+        color: rgb(0, 0, 0);
+      }
+      .main {
+        background-color: #a3a;
+        height: auto;
+        margin: 0 auto;
+        width: 80%;
+      }
+      .section {
+        height: 500px;
+        border: solid rgb(145, 145, 145) 1px;
+        background-color: rgb(180, 244, 255);
+        padding: 40px 0 0 0;
+        text-align: center;
+      }
+      .sticky-top {
+        position: sticky;
+        top: 0px;
+      }
+      .mainflex {
+        background-color: rgb(255, 203, 255);
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 400px;
+        border: solid rgb(145, 145, 145) 1px;
+      }
+      .mianflexin {
+        border: solid rgb(145, 145, 145) 1px;
+      }
+    </style>
+    <script>
+      $(function () {
+        // 當#myNavbar上的<a>連結按鈕click時, 讓整頁慢慢滑動到指定位置=============================
+        $("#navbar a").on("click", function (event) {
+          // this.hash 是取得目前URL中的錨點位置,例如:#section1
+          // 當 this.hash (錨點位置) 不是空的時, 也就是有指定滑動到錨點位置時
+          if (this.hash !== "") {
+            // 阻止<a>連結被click時執行連結工作 (雷同return false, 但return false通常寫在最後)
+            event.preventDefault();
+            // 設定 hash 變數, 記錄目前的錨點
+            var hash = this.hash;
+            // 控制 html,body 執行 animate 動畫, 讓捲出的距離 = 目前錨點位置的 offset().top 座標
+            $("html, body")
+              .stop()
+              .animate({ scrollTop: $(hash).offset().top }, 800, function () {
+                // 將錨點名稱加到URL網址列的後方
+                window.location.hash = hash;
+              });
+          } // if end
+        }); // click end
+      });
+      window.onload = function () {
+        new TypeIt("#titleetypeit", {
+          strings: "KAOÜM",
+          speed: 500,
+          waitUntilVisible: true,
+          loop: true,
+        }).go();
+      };
+    </script>
+  </head>
+  <body>
+    <div id="0" class="top">
+      <h1 id="titleetypeit" class="toptotop"></h1>
+    </div>
+    <nav id="navbar" class="navbar sticky-top">
+      <a href="#0">link1</a>
+      <a href="#1">link2</a>
+      <a href="#2">link3</a>
+      <a href="#3">link4</a>
+    </nav>
+    <div class="main">
+      <section id="1" class="section">
+        <div class="mainflex">
+          <div class="mianflexin">
+            <h1>111</h1>
+          </div>
+          <div class="mianflexin">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+              ipsa. Dolorem quia nam iste ea at, necessitatibus odit enim
+              aspernatur, voluptatum, laudantium eaque esse voluptas. Sed labore
+              tenetur consequuntur excepturi. Asperiores repellat iste eos?
+              Dolore, neque? Necessitatibus, quod. Molestiae, ea! Ullam sequi
+              iure, animi quisquam iste aliquam minus excepturi unde vel
+              voluptatum explicabo tempore culpa ut hic fugiat consectetur
+              temporibus. Neque eaque qui amet pariatur voluptas, assumenda quo
+              doloremque sapiente, labore ad vitae. Consequatur saepe
+              consectetur, sit, minima natus ab quibusdam expedita et rerum
+              quia, nisi blanditiis repudiandae at veritatis! Illum officia
+              pariatur laudantium voluptas quae deserunt sunt sequi explicabo
+              nihil quod magni magnam cum dolores perspiciatis libero amet,
+              laboriosam eius rerum porro fuga, distinctio eum? Maxime ab fugit
+              animi? Mollitia earum nam delectus consequuntur provident
+              laboriosam atque accusamus dolorem, corrupti blanditiis laudantium
+              eligendi placeat voluptas commodi quasi, possimus facilis totam.
+              Quibusdam aut et itaque obcaecati unde aspernatur commodi vitae!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="2" class="section">
+        <div class="mainflex">
+          <div class="mianflexin">
+            <h1>222</h1>
+          </div>
+          <div class="mianflexin">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+              ipsa. Dolorem quia nam iste ea at, necessitatibus odit enim
+              aspernatur, voluptatum, laudantium eaque esse voluptas. Sed labore
+              tenetur consequuntur excepturi. Asperiores repellat iste eos?
+              Dolore, neque? Necessitatibus, quod. Molestiae, ea! Ullam sequi
+              iure, animi quisquam iste aliquam minus excepturi unde vel
+              voluptatum explicabo tempore culpa ut hic fugiat consectetur
+              temporibus. Neque eaque qui amet pariatur voluptas, assumenda quo
+              doloremque sapiente, labore ad vitae. Consequatur saepe
+              consectetur, sit, minima natus ab quibusdam expedita et rerum
+              quia, nisi blanditiis repudiandae at veritatis! Illum officia
+              pariatur laudantium voluptas quae deserunt sunt sequi explicabo
+              nihil quod magni magnam cum dolores perspiciatis libero amet,
+              laboriosam eius rerum porro fuga, distinctio eum? Maxime ab fugit
+              animi? Mollitia earum nam delectus consequuntur provident
+              laboriosam atque accusamus dolorem, corrupti blanditiis laudantium
+              eligendi placeat voluptas commodi quasi, possimus facilis totam.
+              Quibusdam aut et itaque obcaecati unde aspernatur commodi vitae!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="3" class="section">
+        <div class="mainflex">
+          <div class="mianflexin">
+            <h1>333</h1>
+          </div>
+          <div class="mianflexin">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+              ipsa. Dolorem quia nam iste ea at, necessitatibus odit enim
+              aspernatur, voluptatum, laudantium eaque esse voluptas. Sed labore
+              tenetur consequuntur excepturi. Asperiores repellat iste eos?
+              Dolore, neque? Necessitatibus, quod. Molestiae, ea! Ullam sequi
+              iure, animi quisquam iste aliquam minus excepturi unde vel
+              voluptatum explicabo tempore culpa ut hic fugiat consectetur
+              temporibus. Neque eaque qui amet pariatur voluptas, assumenda quo
+              doloremque sapiente, labore ad vitae. Consequatur saepe
+              consectetur, sit, minima natus ab quibusdam expedita et rerum
+              quia, nisi blanditiis repudiandae at veritatis! Illum officia
+              pariatur laudantium voluptas quae deserunt sunt sequi explicabo
+              nihil quod magni magnam cum dolores perspiciatis libero amet,
+              laboriosam eius rerum porro fuga, distinctio eum? Maxime ab fugit
+              animi? Mollitia earum nam delectus consequuntur provident
+              laboriosam atque accusamus dolorem, corrupti blanditiis laudantium
+              eligendi placeat voluptas commodi quasi, possimus facilis totam.
+              Quibusdam aut et itaque obcaecati unde aspernatur commodi vitae!
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
