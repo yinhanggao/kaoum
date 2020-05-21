@@ -44,17 +44,6 @@
         margin-left: 20px;
       }
     </style>
-    <script>
-      var $div = $("div"),
-        $cbox = $("input");
-
-      $div.on("click", function (e) {
-        if (e.target !== $cbox.get(0))
-          $cbox.prop("checked", !$cbox.prop("checked"));
-
-        $div.css("background", $cbox.prop("checked") ? "#AAA" : "");
-      });
-    </script>
   </head>
   <body class="main">
     <div class="hahago">
@@ -63,9 +52,7 @@
         <span class="btn-box">
           <span class="btn"></span>
         </span>
-        <hr />
         <span class="text"></span>
-        <div class="hahano">000</div>
       </label>
     </div>
   </body>
