@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      .grid-top {
+        display: grid;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px 100px;
+        grid-template-areas:
+          "A1 A1 A1 A1"
+          "A1 A1 A1 A1"
+          "A2 A2 A3 A3"
+          "A2 A2 A3 A3";
+      }
+      .A1 {
+        grid-area: A1;
+        background-color: darkcyan;
+      }
+      .A2 {
+        grid-area: A2;
+        background-color: darkorchid;
+      }
+      .A3 {
+        grid-area: A3;
+        background-color: deepskyblue;
+      }
+      /*---------------------------------------------------------------------------*/
+      .grid-top2 {
+        display: grid;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px 100px;
+      }
+      .A11 {
+        grid-row: 1/3;
+        grid-column: 1/3;
+        background-color: darkcyan;
+        order: 1;
+      }
+      .A22 {
+        grid-row: 2/5;
+        grid-column: 2/-1;
+        background-color: darkorchid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-top">
+      <div class="A1"></div>
+      <div class="A2"></div>
+      <div class="A3"></div>
+    </div>
+    <hr />
+    <div class="grid-top2">
+      <div class="A11"></div>
+      <div class="A22"></div>
+    </div>
+  </body>
+</html>

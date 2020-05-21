@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        padding: 0;
+        margin: auto;
+      }
+      .container {
+        height: 500px;
+        width: 500px;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: row;
+        /*容器內直得為主or橫的為主 row 橫 column 直*/
+        justify-content: center;
+        /*主要的那條線對齊方式*/
+        align-items: center;
+        /*次要的那條線對齊方式*/
+        flex-wrap: wrap;
+      }
+      .box {
+        height: 96px;
+        width: 96px;
+        background-color: cornflowerblue;
+        margin: 1px;
+        padding: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">111</div>
+      <div class="box">222</div>
+      <div class="box">333</div>
+      <div class="box">444</div>
+      <div class="box">555</div>
+      <div class="box">666</div>
+      <div class="box">777</div>
+      <div class="box">888</div>
+      <div class="box">999</div>
+      <div class="box">000</div>
+      <div class="box">111</div>
+      <div class="box">222</div>
+      <div class="box">333</div>
+      <div class="box">444</div>
+      <div class="box">555</div>
+      <div class="box">666</div>
+      <div class="box">777</div>
+      <div class="box">888</div>
+      <div class="box">999</div>
+      <div class="box">000</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checked</title>
+    <style>
+      .btn-box {
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        border-radius: 100px;
+        background-color: rgb(212, 212, 212);
+        box-shadow: 0px 3px 0px rgb(56, 56, 56) inset;
+      }
+      .btn-box .btn {
+        display: block;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        margin-left: 0;
+        transition: 0.5s;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .hahano {
+        background-color: #fcd6d6;
+        color: black;
+        transition: 0.5s;
+      }
+      .checkbox:checked ~ .hahano {
+        background-color: blueviolet;
+        color: white;
+      }
+      .checkbox {
+        position: absolute;
+        opacity: 0;
+      }
+      .checkbox:checked + .btn-box {
+        background-color: rgb(200, 200, 255);
+      }
+      .checkbox:checked + .btn-box .btn {
+        margin-left: 20px;
+      }
+    </style>
+    <script>
+      var $div = $("div"),
+        $cbox = $("input");
+
+      $div.on("click", function (e) {
+        if (e.target !== $cbox.get(0))
+          $cbox.prop("checked", !$cbox.prop("checked"));
+
+        $div.css("background", $cbox.prop("checked") ? "#AAA" : "");
+      });
+    </script>
+  </head>
+  <body class="main">
+    <div class="hahago">
+      <label>
+        <input type="checkbox" name="" id="" class="checkbox" />
+        <span class="btn-box">
+          <span class="btn"></span>
+        </span>
+        <hr />
+        <span class="text"></span>
+        <div class="hahano">000</div>
+      </label>
+    </div>
+  </body>
+</html>
