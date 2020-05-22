@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12-nogod</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .header {
+        display: flex;
+        padding: 6px 10px;
+        background-color: #000;
+      }
+      .logo {
+        display: inline-block;
+        padding: 6px 0;
+        border-radius: 10px;
+      }
+      .header nav {
+        text-align: right;
+        width: 100%;
+        font-size: 0px;
+      }
+      .header nav a {
+        display: inline-block;
+        line-height: 52px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 0px 10px;
+      }
+      .header nav a:hover {
+        background-color: #fa0;
+      }
+      .banner img {
+        width: 100%;
+      }
+      .path {
+        display: flex;
+      }
+      .path li {
+        padding: 6px 8px;
+        position: relative;
+      }
+      .path li a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .path li + li::before {
+        content: "/";
+        color: #aaa;
+        position: absolute;
+        left: 0;
+      }
+      .item h3 {
+        font-size: 36px;
+        padding: 0 0 30px;
+      }
+      .wrap {
+        height: auto;
+        margin: auto;
+      }
+      .about {
+        padding: 40px 0 60px;
+      }
+      .about .wrap {
+        display: flex;
+      }
+      .about .wrap .item {
+        width: 300px;
+        margin: 0 10px;
+        text-align: center;
+        margin: auto;
+      }
+      .about .wrap .item img {
+        border-radius: 50%;
+      }
+      .about > h2 {
+        width: 960px;
+        text-align: center;
+        font-size: 42px;
+        padding: 20px 0;
+        margin: auto;
+      }
+      .about > p {
+        width: 660px;
+        margin: auto;
+        padding: 0 0 40px;
+      }
+      .products {
+        background-color: #ccc;
+      }
+      .products .wrap {
+        display: flex;
+      }
+      .products .item {
+        width: 50%;
+      }
+      .products .item img {
+        width: 100%;
+        vertical-align: bottom;
+        border-radius: 40px;
+      }
+      .products .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+        text-align: center;
+      }
+      .service {
+        padding: 40px 0;
+        background-color: #ffa;
+      }
+      .service > h2 {
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        font-size: 42px;
+        padding: 20px 0;
+      }
+      .service > p {
+        width: 960px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .service .wrap {
+        display: flex;
+      }
+      .service .item {
+        margin: 0 10px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+      }
+      .service .item img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .footer {
+        text-align: center;
+        background-color: #000;
+        color: #888;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#">
+        <img
+          src="https://picsum.photos/80/40?random=1"
+          alt="kaoum"
+          class="logo"
+        />
+      </a>
+
+      <nav>
+        <a href="#">link1</a>
+        <a href="#">link2</a>
+        <a href="#">link3</a>
+        <a href="#">link4</a>
+        <a href="#">link5</a>
+        <a href="#">link6</a>
+      </nav>
+    </div>
+    <div class="banner">
+      <img src="https://picsum.photos/1200/300?random=2" />
+    </div>
+
+    <ul class="path">
+      <li><a href="#">首頁</a></li>
+      <li><a href="#">醉心胶錫</a></li>
+      <li><a href="#">首頁</a></li>
+    </ul>
+    <div class="about">
+      <h2>關於我們</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi error
+        eum quaerat officia? Nesciunt in officia dolore. Aperiam nihil omnis
+        quod molestias repellat id nesciunt tenetur! Asperiores consectetur
+        maiores ipsa!
+      </p>
+      <div class="wrap">
+        <div class="item">
+          <img src="https://picsum.photos/50/50?random=3" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Dignissimos nobis voluptate dicta ipsum! Id perspiciatis voluptas
+            reprehenderit pariatur vitae optio culpa quidem, aperiam perferendis
+            eveniet explicabo vel, similique sed praesentium.
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/50/50?random=3" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Dignissimos nobis voluptate dicta ipsum! Id perspiciatis voluptas
+            reprehenderit pariatur vitae optio culpa quidem, aperiam perferendis
+            eveniet explicabo vel, similique sed praesentium.
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/50/50?random=3" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Dignissimos nobis voluptate dicta ipsum! Id perspiciatis voluptas
+            reprehenderit pariatur vitae optio culpa quidem, aperiam perferendis
+            eveniet explicabo vel, similique sed praesentium.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="products">
+      <div class="wrap">
+        <div class="item pic">
+          <img src="https://picsum.photos/600/400?random=4" alt="" />
+        </div>
+        <div class="item text">
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            ducimus ipsum officia necessitatibus vel reprehenderit minima quia,
+            impedit repudiandae dolor voluptates accusamus nam, praesentium odio
+            delectus distinctio cum tempore quo!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service">
+      <h2>服務項目</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae nihil
+        molestias aspernatur numquam quibusdam officiis fuga exercitationem
+        ducimus omnis, quis velit facilis officia tenetur ad dignissimos
+        doloribus aperiam optio minus.
+      </p>
+      <div class="wrap">
+        <div class="item">
+          <img src="https://picsum.photos/300/200?random=5" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            doloribus culpa, quaerat magni omnis molestias sint, eligendi,
+            officiis vero optio dolores. Quae tempora et ipsa praesentium
+            facilis deleniti quo ab.
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/300/200?random=6" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            doloribus culpa, quaerat magni omnis molestias sint, eligendi,
+            officiis vero optio dolores. Quae tempora et ipsa praesentium
+            facilis deleniti quo ab.
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/300/200?random=7" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            doloribus culpa, quaerat magni omnis molestias sint, eligendi,
+            officiis vero optio dolores. Quae tempora et ipsa praesentium
+            facilis deleniti quo ab.
+          </p>
+        </div>
+        <div class="item">
+          <img src="https://picsum.photos/300/200?random=8" />
+          <h3>title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            doloribus culpa, quaerat magni omnis molestias sint, eligendi,
+            officiis vero optio dolores. Quae tempora et ipsa praesentium
+            facilis deleniti quo ab.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; copyerright 2018 by kaoum
+    </div>
+  </body>
+</html>
