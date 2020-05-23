@@ -5,31 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
       .centttttttttter {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100vh;
+      }
+      .bg {
+        position: absolute;
+        z-index: -10;
+        opacity: 0.5;
       }
       .center {
         text-align: left;
         line-height: 2;
+        height: 100vh;
+        padding: 0 5px 0 0;
+        background-color: rgba(0, 0, 0, 0.5);
       }
       .aa {
         padding: 5px 0 5px 5px;
         display: block;
-        background-color: white;
-        transition: 0.1s;
-        color: black;
+        transition: 0.2s;
+        color: rgb(255, 255, 255);
         text-decoration: none;
+        text-align: right;
+        padding: 0 0 0 10px;
       }
       .aa:hover {
-        background-color: rgb(119, 119, 119);
-        color: white;
+        background-color: white;
+        color: black;
+      }
+      .btn {
+        display: block;
+        text-align: center;
+        background-color: white;
+        border: solid black 1px;
       }
     </style>
   </head>
   <body>
     <div class="centttttttttter">
+      <img src="https://picsum.photos/1920/1024/?random=1" class="bg" />
       <div class="center">
         <a class="aa" href="01.html">01.html</a>
         <a class="aa" href="02-nav+flex(b4).html">02-nav+flex(b4).html</a>
@@ -45,7 +66,9 @@
         <a class="aa" href="12-nogod.html">12-nogod.html</a>
         <a class="aa" href="13-fullad.html">13-fullad.html</a>
         <a class="aa" href="14-bs4.html">14-bs4.html</a>
+        <a class="aa" href="15-weather.html">15-weather.html</a>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
