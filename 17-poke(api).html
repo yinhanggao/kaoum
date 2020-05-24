@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .li {
+        background-color: white;
+        color: black;
+        transition: 0.2s;
+      }
+      li:hover {
+        background-color: black;
+        color: white;
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="flex-box">
+        <ol class="poke"></ol>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        var settings = {
+          async: true,
+          crossDomain: true,
+          url: "https://pokemon-go1.p.rapidapi.com/pokemon_names.json",
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "pokemon-go1.p.rapidapi.com",
+            "x-rapidapi-key":
+              "57ae7417a8msh3ca337af7da031dp1c946fjsnbd06e63ccad6",
+          },
+        };
+
+        $.ajax(settings).done(function (response) {
+          for (i = 1; i < 810; i++) {
+            var dataaaa;
+            dataaaa = "<li>" + response[i]["name"] + "</li>" + "</br>";
+            $(".poke").append(dataaaa);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
