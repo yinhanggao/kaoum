@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        display: flex;
+        background-color: rgb(77, 77, 77);
+      }
+      .item {
+        width: 25%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px;
+      }
+
+      .item img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      .item .text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .item:hover .text {
+        opacity: 1;
+      }
+      .item h6 {
+        font-size: 36px;
+        color: yellow;
+      }
+      .item h6::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 2px;
+        margin: 10px 0;
+        background-color: #fff;
+        transition: width 0.5s 0.3s;
+      }
+      .item:hover h6::after {
+        width: 100%;
+      }
+      .item p {
+        font-size: 16px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/300/300/?random=1" />
+        <div class="text">
+          <h6>465464</h6>
+          <p>
+            第一登錄防止自己昨日我說電視台違反無門面臨，轉帖加拿大由此預期模擬是誰春節不論事項老人領域，你可以使得材料發達任意為何雖然章節你就，運作學科特別是哪裡這樣針對世紀之中各項得分機制忍不住，有點帳號多麼團隊太多喜愛令人電子郵件祝福不想用戶無比取得，走進輕輕關。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/300/300/?random=2" />
+        <div class="text">
+          <h6>465464</h6>
+          <p>
+            第一登錄防止自己昨日我說電視台違反無門面臨，轉帖加拿大由此預期模擬是誰春節不論事項老人領域，你可以使得材料發達任意為何雖然章節你就，運作學科特別是哪裡這樣針對世紀之中各項得分機制忍不住，有點帳號多麼團隊太多喜愛令人電子郵件祝福不想用戶無比取得，走進輕輕關。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/300/300/?random=3" />
+        <div class="text">
+          <h6>465464</h6>
+          <p>
+            第一登錄防止自己昨日我說電視台違反無門面臨，轉帖加拿大由此預期模擬是誰春節不論事項老人領域，你可以使得材料發達任意為何雖然章節你就，運作學科特別是哪裡這樣針對世紀之中各項得分機制忍不住，有點帳號多麼團隊太多喜愛令人電子郵件祝福不想用戶無比取得，走進輕輕關。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/300/300/?random=4" />
+        <div class="text">
+          <h6>465464</h6>
+          <p>
+            第一登錄防止自己昨日我說電視台違反無門面臨，轉帖加拿大由此預期模擬是誰春節不論事項老人領域，你可以使得材料發達任意為何雖然章節你就，運作學科特別是哪裡這樣針對世紀之中各項得分機制忍不住，有點帳號多麼團隊太多喜愛令人電子郵件祝福不想用戶無比取得，走進輕輕關。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

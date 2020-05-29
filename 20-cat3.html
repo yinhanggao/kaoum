@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: dimgrey;
+      }
+      .wrap {
+        display: flex;
+        width: 900px;
+      }
+      .item {
+        width: 260px;
+        background-color: white;
+        margin: 10px;
+        transition: 0.5s;
+        color: dimgrey;
+        position: relative;
+      }
+
+      .item img {
+        vertical-align: bottom;
+      }
+      .item h2 {
+        padding-top: 10px;
+        text-align: center;
+      }
+      .item .text {
+        position: relative;
+      }
+      .item p {
+        padding: 15px;
+        line-height: 1.5;
+      }
+      .item h2::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-left: 130px solid white;
+        border-right: 130px solid white;
+        transition: 0.5s;
+      }
+      .item:hover h2::before {
+        border-left: 130px solid #000;
+        border-right: 130px solid #000;
+        color: white;
+      }
+      .item:hover {
+        background-color: #000;
+        color: white;
+        top: -30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <img src="https://picsum.photos/260/300/?random=1" />
+        <div class="text">
+          <h2>title</h2>
+          <p>
+            實力提高，網際網路一塊本人登錄高中疾病小組第一章，誠信並沒有標準信號媒體螢幕現代化造型，圖像化一段時間價值模糊實現恐怖穿著是有主管你想然而集體只好，辦公室總體跟着但我中文聯合，解壓千萬新竹交易各自圖像化都有大力最多，委託體現新型十分每次，完美版本，分公司。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/260/300/?random=2" />
+        <div class="text">
+          <h2>title</h2>
+          <p>
+            實力提高，網際網路一塊本人登錄高中疾病小組第一章，誠信並沒有標準信號媒體螢幕現代化造型，圖像化一段時間價值模糊實現恐怖穿著是有主管你想然而集體只好，辦公室總體跟着但我中文聯合，解壓千萬新竹交易各自圖像化都有大力最多，委託體現新型十分每次，完美版本，分公司。
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="https://picsum.photos/260/300/?random=3" />
+        <div class="text">
+          <h2>title</h2>
+          <p>
+            實力提高，網際網路一塊本人登錄高中疾病小組第一章，誠信並沒有標準信號媒體螢幕現代化造型，圖像化一段時間價值模糊實現恐怖穿著是有主管你想然而集體只好，辦公室總體跟着但我中文聯合，解壓千萬新竹交易各自圖像化都有大力最多，委託體現新型十分每次，完美版本，分公司。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

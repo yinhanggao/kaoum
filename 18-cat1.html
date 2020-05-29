@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .banner {
+        width: 100%;
+        height: 100vh;
+        background-color: #ccc;
+        background: linear-gradient(
+              115deg,
+              rgba(255, 255, 255, 0.452) 50%,
+              transparent 50%
+            )
+            center center / 100% 100%,
+          url(https://picsum.photos/1200/600?random=1) right center/auto 100%;
+        /* background: linear-gradient(
+              115deg,
+              rgb(251, 219, 255) 50%,
+              transparent 50%
+            )
+            center center / 100% 100%,
+          url("https://picsum.photos/1200/600?random=1") right center/auto 100%; */
+      }
+      .container {
+        height: 100%;
+        width: 1200px;
+        margin: auto;
+      }
+      .banner-txt {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .banner-txt h1 {
+        font-size: 80px;
+        border-bottom: 1px solid #333;
+      }
+      .banner-txt h1 small {
+        display: block;
+        font-size: 53px;
+      }
+      .banner-txt h2 {
+        font-size: 50px;
+      }
+      .banner-txt p {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="container">
+        <div class="banner-txt">
+          <h1>一二三四五六 <small>七八九十一二三四五</small></h1>
+          <h2>六七八九十一</h2>
+          <p>二三四五六七八九十一 <br />二三四五六七八九十一</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
