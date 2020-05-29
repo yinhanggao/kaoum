@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      body {
+        background: linear-gradient(45deg, #cac, #aca) center center / 100% 100%
+          fixed;
+        padding: 100px 0;
+      }
+      .wrap {
+        width: 1200px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 560px;
+        background-color: rgba(128, 128, 128, 0.5);
+        box-sizing: border-box;
+        margin: 10px;
+        position: relative;
+        border-radius: 5px;
+      }
+      .item .pic {
+        width: 50%;
+      }
+      .item .pic img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      .item .txt {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 0 0 10px;
+      }
+      .diva {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: rgba(128, 128, 128, 0.651);
+        background-color: rgba(128, 128, 128, 0.26);
+        text-align: center;
+        box-sizing: border-box;
+        display: block;
+        padding-top: 1px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+      a:hover {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item" id="it0">
+        <div class="pic">
+          <img src="https://picsum.photos/300/300/?random=1" />
+        </div>
+        <div class="txt">
+          <h2>title</h2>
+          <p>原因大家都工具相比尊重我愛，眼裡顯卡改進課堂追求。</p>
+        </div>
+        <div class="diva"><a id="close0" href="#">X</a></div>
+      </div>
+      <div class="item" id="it1">
+        <div class="pic">
+          <img src="https://picsum.photos/300/300/?random=2" />
+        </div>
+        <div class="txt">
+          <h2>title</h2>
+          <p>原因大家都工具相比尊重我愛，眼裡顯卡改進課堂追求。</p>
+        </div>
+        <div class="diva"><a id="close1" href="#">X</a></div>
+      </div>
+      <div class="item" id="it2">
+        <div class="pic">
+          <img src="https://picsum.photos/300/300/?random=3" />
+        </div>
+        <div class="txt">
+          <h2>title</h2>
+          <p>原因大家都工具相比尊重我愛，眼裡顯卡改進課堂追求。</p>
+        </div>
+        <div class="diva"><a id="close2" href="#">X</a></div>
+      </div>
+      <div class="item" id="it3">
+        <div class="pic">
+          <img src="https://picsum.photos/300/300/?random=4" />
+        </div>
+        <div class="txt">
+          <h2>title</h2>
+          <p>原因大家都工具相比尊重我愛，眼裡顯卡改進課堂追求。</p>
+        </div>
+        <div class="diva"><a id="close3" href="#">X</a></div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#close0").click(function () {
+          $("#it0").hide(500);
+        });
+        $("#close1").click(function () {
+          $("#it1").hide(500);
+        });
+        $("#close2").click(function () {
+          $("#it2").hide(500);
+        });
+        $("#close3").click(function () {
+          $("#it3").hide(500);
+        });
+      });
+    </script>
+  </body>
+</html>
