@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
       * {
-        font-family: "Fjalla One";
+        font-family: "微軟正黑體";
       }
 
       svg {
@@ -14,15 +14,17 @@
       }
 
       body {
-        background-color: rgba(110, 110, 110, 0.5);
+        background: linear-gradient(45deg, #eef, #efe);
         display: flex;
         align-items: center;
-        color: white;
+        color: rgba(141, 141, 141, 0.5);
         font-size: 28px;
+        font-weight: 900;
+        text-shadow: 1px 1px black;
       }
 
       path {
-        stroke: rgb(0, 0, 0);
+        stroke: rgba(0, 0, 0, 0.5);
         fill: transparent;
         -webkit-transition: 0.5s;
         transition: 0.5s;
@@ -162,11 +164,10 @@
       </svg>
     </div>
     <div class="mainpass">
-      <p id="nowtime"></p>
-      <p id="citty"></p>
-      <p id="weath12h0"></p>
-      <p id="weath12h1"></p>
-      <p id="weath12h3"></p>
+      <h2 id="citty">城市</h2>
+      <p id="weath12h0">降雨機率</p>
+      <p id="weath12h1">天氣</p>
+      <p id="weath12h3">溫度</p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
