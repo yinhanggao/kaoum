@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .footer {
+        width: 100%;
+        background: linear-gradient(55deg, #aaa, #aaf);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer .footer-main {
+        display: flex;
+        margin: 50px 0;
+      }
+      .footer-item {
+        width: 100px;
+        margin: 0 50px;
+        text-align: start;
+      }
+      .footer-item h3 {
+        border-bottom: 1.3px solid #000;
+        padding-bottom: 10px;
+      }
+      .footer-item a {
+        display: block;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+        padding: 5px 0;
+      }
+      .footer-item a:hover {
+        color: rgb(255, 255, 255);
+      }
+      .footer-copyright {
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(-55deg, #aaa, #aaf);
+      }
+      .footer-scer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 0 0;
+      }
+      .footer-scer input {
+        border-radius: 5px 0 0 5px;
+        width: 60px;
+        height: 15px;
+        border: none;
+      }
+      .footer-scer button {
+        border-radius: 0 5px 5px 0;
+        height: 15px;
+        border: none;
+        width: 40px;
+      }
+      .footer-scer input,
+      .footer-scer button:focus {
+        outline: none;
+      }
+      .footer-scer button:hover {
+        background-color: rgba(128, 128, 128, 0.418);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer">
+      <div class="footer-main">
+        <div class="footer-item">
+          <h3>介紹</h3>
+          <ul>
+            <li><a href="#">必然位我</a></li>
+            <li><a href="#">必然位我</a></li>
+            <li><a href="#">必然位我</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>項目</h3>
+          <ul>
+            <li><a href="#">必然位我</a></li>
+            <li><a href="#">必然位我</a></li>
+            <li><a href="#">必然位我</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>關於</h3>
+          <ul>
+            <li><a href="#">必然位我</a></li>
+            <li><a href="#">必然位我</a></li>
+            <li><a href="#">必然位我</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>搜尋</h3>
+          <div class="footer-scer">
+            <input type="text" />
+            <button type="submit">搜尋</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">2020 &copy; kaoum</div>
+    </div>
+  </body>
+</html>

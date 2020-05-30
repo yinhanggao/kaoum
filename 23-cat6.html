@@ -27,36 +27,47 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
       }
       div .black {
         width: 50px;
         height: 50px;
         background-color: black;
+        animation-name: text;
         margin: 0 10px;
-        opacity: 0;
       }
-      .aa1 {
-        animation-delay: 0.5s;
-        animation-duration: 5s;
-        animation-name: text;
+      .wrap .black:nth-child(1) {
+        animation-duration: 1s;
       }
-      .aa2 {
-        animation-delay: 1s;
-        animation-duration: 5s;
-        animation-name: text;
+      .wrap .black:nth-child(2) {
+        animation-duration: 2s;
       }
-      .aa3 {
-        animation-delay: 1.5s;
+      .wrap .black:nth-child(3) {
+        animation-duration: 3s;
+      }
+      .wrap .black:nth-child(4) {
+        animation-duration: 4s;
+      }
+      .wrap .black:nth-child(5) {
         animation-duration: 5s;
-        animation-name: text;
+      }
+      .wrap .black:nth-child(6) {
+        animation-duration: 6s;
+      }
+      .wrap .black:nth-child(7) {
+        animation-duration: 7s;
       }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <div class="black aa1"></div>
-      <div class="black aa2"></div>
-      <div class="black aa3"></div>
+      <div class="black"></div>
+      <div class="black"></div>
+      <div class="black"></div>
+      <div class="black"></div>
+      <div class="black"></div>
+      <div class="black"></div>
+      <div class="black"></div>
     </div>
   </body>
 </html>

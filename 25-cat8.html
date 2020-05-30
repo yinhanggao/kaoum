@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .nav-wrap {
+        width: 100%;
+        background-color: gray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+      }
+      .nav-logo img {
+        vertical-align: middle;
+      }
+      .nav-item a {
+        text-decoration: none;
+        color: white;
+        padding: 0 25px;
+        line-height: 3;
+        display: inline-block;
+        background-color: gray;
+        transition: 0.3s;
+        position: relative;
+        transform: translateY(0px);
+      }
+      .nav-item a:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+        transform: translateY(-5px);
+      }
+      .nav-item a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: 5px;
+        height: 0;
+        border-bottom: rgb(0, 0, 0) 2px solid;
+        transition: 0.3s;
+      }
+      .nav-item a:hover:after {
+        left: 0%;
+        right: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav-wrap">
+        <div class="nav-logo">
+          <a href="#"><img src="https://picsum.photos/30/30/?random=1" /></a>
+        </div>
+        <div class="nav-item">
+          <nav>
+            <a href="#">雄壯</a>
+            <a href="#">威武</a>
+            <a href="#">嚴肅</a>
+            <a href="#">剛直</a>
+            <a href="#">堅強</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
