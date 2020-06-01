@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .wrap {
+        height: 100vh;
+        width: 100%;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item {
+        width: 50%;
+        height: 50%;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="item">
+        <form>
+          <select name="city" id="city" onchange="print_value()" ;>
+            <option value="請選擇城市" disabled="" selected=""
+              >請選擇城市</option
+            >
+            <option value="keelung_city">基隆市</option>
+            <option value="taipei_city">臺北市</option>
+            <option value="new_taipei_city">新北市</option>
+            <option value="taoyuan_country">桃園市</option>
+            <option value="hsinchu_city">新竹市</option>
+            <option value="hsinchu_country">新竹縣</option>
+            <option value="miaoli_country">苗栗縣</option>
+            <option value="taichung_city">臺中市</option>
+            <option value="changhua_country">彰化縣</option>
+            <option value="nantou_country">南投縣</option>
+            <option value="yunlin_country">雲林縣</option>
+            <option value="chiayi_city">嘉義市</option>
+            <option value="chiayi_country">嘉義縣</option>
+            <option value="tainan_city">臺南市</option>
+            <option value="kaohsiung_city">高雄市</option>
+            <option value="pingtung_country">屏東縣</option>
+            <option value="yilan_country">宜蘭縣</option>
+            <option value="hualien_country">花蓮縣</option>
+            <option value="taitung_country">臺東縣</option>
+            <option value="penghu_country">澎湖縣</option>
+            <option value="kinmen_country">金門縣</option>
+          </select>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
