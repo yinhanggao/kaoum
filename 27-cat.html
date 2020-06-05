@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      body {
+        background-color: rgba(0, 0, 0, 0.651);
+        color: white;
+      }
+      .sidemenu {
+        width: 300px;
+        height: 100vh;
+        background: linear-gradient(45deg, #faf, #71f);
+        padding: 50px 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+      }
+      .sidemenusearch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #sidemenusearchtxtbox {
+        border-radius: 9px 0px 0px 9px;
+        border-left: white solid 1px;
+        border-right: transparent;
+      }
+      #sidemenusearchbutton {
+        border-radius: 0px 9px 9px 0px;
+        border-left: transparent;
+        border-right: white solid 1px;
+        cursor: pointer;
+      }
+      #sidemenusearchtxtbox,
+      #sidemenusearchbutton {
+        background-color: transparent;
+        border-top: white solid 1px;
+        border-bottom: white solid 1px;
+        height: 19px;
+      }
+      #sidemenusearchbutton:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      #sidemenusearchtxtbox:focus,
+      #sidemenusearchbutton:focus {
+        outline: none;
+      }
+      .sidemenuitem {
+        padding: 30px 0 0 0;
+        box-sizing: border-box;
+        display: flex;
+        position: relative;
+      }
+      .sidemenuitem::before {
+        content: "";
+        border-bottom: white solid 1px;
+        position: absolute;
+        top: 60px;
+        left: -60px;
+        right: -60px;
+      }
+      .sidemenuicon {
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .sidemenuitem:hover .sidemenuicon {
+        opacity: 1;
+      }
+      .sidemenutxt a {
+        text-decoration: none;
+        color: white;
+      }
+      .sidemenuinside {
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        background-color: black;
+        right: -40px;
+        top: 50%;
+        cursor: pointer;
+        font-size: 8px;
+        line-height: 50px;
+        transform: scaleX(1);
+        transition: transform 0.3s;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 0;
+      }
+      #sidemenucheckbox {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+      }
+      #sidemenucheckbox:checked + .sidemenu {
+        transform: translateX(0);
+      }
+      #sidemenucheckbox:checked + .sidemenu label .sidemenuinside {
+        transform: scaleX(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="sidemenucheckbox" />
+    <div class="sidemenu">
+      <div class="sidemenusearch">
+        <input type="search" name="" id="sidemenusearchtxtbox" />
+        <input type="button" value="➤" id="sidemenusearchbutton" />
+      </div>
+      <div class="sidemenuitem">
+        <div class="sidemenuicon">☺</div>
+        <div class="sidemenutxt"><a href="#">標題1</a></div>
+      </div>
+      <div class="sidemenuitem">
+        <div class="sidemenuicon">☺</div>
+        <div class="sidemenutxt"><a href="#">標題2</a></div>
+      </div>
+      <div class="sidemenuitem">
+        <div class="sidemenuicon">☺</div>
+        <div class="sidemenutxt"><a href="#">標題3</a></div>
+      </div>
+      <div class="sidemenuitem">
+        <div class="sidemenuicon">☺</div>
+        <div class="sidemenutxt"><a href="#">標題4</a></div>
+      </div>
+      <label for="sidemenucheckbox">
+        <div class="sidemenuinside">➤</div>
+      </label>
+    </div>
+  </body>
+</html>
