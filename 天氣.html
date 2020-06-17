@@ -3,47 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        font-family: "微軟正黑體";
-        box-sizing: border-box;
-        color: white;
-        font-size: 48px;
-      }
-      svg {
-        height: 88.8vh;
-      }
-
-      path {
-        stroke: white;
-        fill: black;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-        cursor: pointer;
-      }
-      path:hover {
-        fill: #c4ff94;
-        -webkit-transform: translate(-5px, -5px);
-        transform: translate(-5px, -5px);
-      }
-      .main {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        background: linear-gradient(45deg, #aaf, #7ff);
-      }
-      table {
-        text-align: end;
-      }
-    </style>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>天氣</title>
   </head>
   <body>
-    <div class="main">
-      <div class="twsvg">
+    <div class="navbar">
+      <div class="logo"><a href="index1.html">kaoum</a></div>
+      <nav>
+        <a href="天氣.html">天氣</a>
+        <a href="#">path2</a>
+        <a href="#">path3</a>
+      </nav>
+    </div>
+    <div class="wemain">
+      <div class="main_1">
         <svg
           id="cf503461-00bd-459a-aeb5-062ebc913211"
           data-name="圖層 1"
@@ -168,53 +142,24 @@
           />
         </svg>
       </div>
-      <table>
-        <tr>
-          <td><h2 id="citty">城市</h2></td>
-        </tr>
-        <tr>
-          <td><p id="weath12h0">降雨機率</p></td>
-        </tr>
-        <tr>
-          <td><p id="weath12h1">天氣</p></td>
-        </tr>
-        <tr>
-          <td><p id="weath12h3">溫度</p></td>
-        </tr>
-      </table>
-      <div class="mainpass"></div>
+      <div class="main_2">
+        <table>
+          <tr>
+            <td><h2 id="citty">城市</h2></td>
+          </tr>
+          <tr>
+            <td><p id="weath12h0">降雨機率</p></td>
+          </tr>
+          <tr>
+            <td><p id="weath12h1">天氣</p></td>
+          </tr>
+          <tr>
+            <td><p id="weath12h3">溫度</p></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-      $("path").mousemove(function (e) {
-        var tagname = $(this).attr("data-name");
-        $.ajax({
-          type: "GET",
-          url:
-            "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=CWB-5FC93907-783A-4AC3-8BC1-70D286425F47&locationName=" +
-            tagname,
-          success: function (data) {
-            var thisdata = data;
-
-            str =
-              thisdata["records"]["locations"][0]["location"][0][
-                "weatherElement"
-              ][7]["time"][0]["elementValue"][0]["value"];
-            int =
-              thisdata["records"]["locations"][0]["location"][0][
-                "weatherElement"
-              ][1]["time"][0]["elementValue"][0]["value"];
-            dex =
-              thisdata["records"]["locations"][0]["location"][0][
-                "weatherElement"
-              ][3]["time"][0]["elementValue"][0]["value"];
-            document.getElementById("citty").innerHTML = tagname;
-            document.getElementById("weath12h0").innerHTML = "☂" + str + "%";
-            document.getElementById("weath12h1").innerHTML = int;
-            document.getElementById("weath12h3").innerHTML = dex + "&#176;";
-          },
-        });
-      });
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>

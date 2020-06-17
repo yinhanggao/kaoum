@@ -1,0 +1,70 @@
+body {
+  font-family: "微軟正黑體";
+}
+.navbar {
+  background-color: rgb(240, 128, 128);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(88, 32, 32, 0.5) 0px 1px 0px 0px;
+  width: 100%;
+}
+.logo {
+  font-size: 28px;
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  line-height: 50px;
+  padding: 0 20px;
+  transition: 0.2s;
+}
+.navbar a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+.homemain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.wemain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    87deg,
+    rgba(167, 167, 167, 0.5),
+    rgba(112, 112, 158, 0.5)
+  );
+}
+
+/*SVG*/
+
+svg {
+  height: 80vh;
+}
+
+path {
+  stroke: white;
+  fill: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+path:hover {
+  fill: #c4ff94;
+  -webkit-transform: translate(-5px, -5px);
+  transform: translate(-5px, -5px);
+}
+table {
+  text-align: end;
+  color: white;
+}
+
+td h2 {
+  font-size: 48px;
+}
+td p {
+  font-size: 33px;
+}

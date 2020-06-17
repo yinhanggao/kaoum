@@ -1,4 +1,4 @@
-function betterThanAverage(classPoints, yourPoints) {
-  // Your code here
+function numberToString(num) {
+  // Return a string of the number here!
 }
-console.log(betterThanAverage([2, 3], 5));
+console.log(numberToString(67));
