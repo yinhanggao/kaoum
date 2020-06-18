@@ -2,7 +2,7 @@ body {
   font-family: "微軟正黑體";
 }
 .navbar {
-  background-color: rgb(240, 128, 128);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   box-shadow: rgba(88, 32, 32, 0.5) 0px 1px 0px 0px;
@@ -13,21 +13,25 @@ body {
 }
 .navbar a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   height: 100%;
   line-height: 50px;
   padding: 0 20px;
   transition: 0.2s;
+  font-weight: 900;
 }
 .navbar a:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(160, 116, 116);
 }
 .homemain {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  flex-direction: column;
+  background: linear-gradient(33deg, #aaf, #faa);
 }
+
 .wemain {
   display: flex;
   justify-content: center;
@@ -70,6 +74,62 @@ td p {
 }
 
 /**/
-.welecome {
-  font-size: 32px;
+.wrap {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 50px 0;
+  width: 100vh;
+}
+.item {
+  width: 260px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  transition: 0.5s;
+  color: dimgrey;
+  position: relative;
+}
+
+.item img {
+  vertical-align: bottom;
+  width: 260px;
+  height: 300px;
+}
+.item h2 {
+  padding-top: 10px;
+  text-align: center;
+}
+.item .text {
+  position: relative;
+}
+.item p {
+  padding: 15px;
+  line-height: 1.5;
+}
+.item h2::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 130px solid rgb(255, 255, 255);
+  border-right: 130px solid rgb(255, 255, 255);
+  transition: 0.5s;
+}
+.item:hover h2::before {
+  border-left: 130px solid rgb(231, 169, 169);
+  border-right: 130px solid rgb(231, 169, 169);
+  color: rgb(255, 255, 255);
+}
+.item:hover {
+  background-color: rgb(231, 169, 169);
+  color: rgb(255, 255, 255);
+  top: -30px;
+}
+.more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
