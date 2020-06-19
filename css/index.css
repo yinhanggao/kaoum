@@ -97,16 +97,21 @@ td p {
   transition: 0.5s;
   color: dimgrey;
   position: relative;
+  transform: translateY(0px);
+  border-radius: 5px;
 }
 
 .item img {
   vertical-align: bottom;
   width: 260px;
   height: 300px;
+  border-radius: 5px;
 }
 .item h2 {
   padding-top: 10px;
   text-align: center;
+  border-bottom: rgba(121, 121, 121, 0.5) 1px solid;
+  padding-bottom: 10px;
 }
 .item .text {
   position: relative;
@@ -135,12 +140,31 @@ td p {
 .item:hover {
   background-color: rgb(231, 169, 169);
   color: rgb(255, 255, 255);
-  top: -30px;
+  transform: translateY(-50px);
 }
 .more {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 5px;
+  bottom: 105px;
+  background-color: transparent;
+  border-radius: 5px;
+  width: 35px;
+  height: 13px;
+  border: dimgrey solid 1px;
+}
+.more:hover {
+  border: white solid 1px;
+}
+.more a {
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  color: dimgrey;
+  display: block;
+  line-height: 0.9;
+}
+.more a:hover {
+  color: rgb(255, 255, 255);
 }
 /*twinfo*/
 
