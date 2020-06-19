@@ -24,7 +24,6 @@ body {
   color: rgb(160, 116, 116);
 }
 .homemain {
-  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,10 +85,16 @@ td p {
 .wrap {
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  flex-direction: column;
   padding: 50px 0;
-  width: 100vh;
 }
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    flex-direction: row;
+  }
+}
+
 .item {
   width: 260px;
   background-color: rgb(255, 255, 255);
@@ -99,6 +104,7 @@ td p {
   position: relative;
   transform: translateY(0px);
   border-radius: 5px;
+  margin: 30px;
 }
 
 .item img {
