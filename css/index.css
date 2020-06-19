@@ -93,6 +93,9 @@ td p {
   .wrap {
     flex-direction: row;
   }
+  .homemain {
+    height: 100vh;
+  }
 }
 
 .item {
