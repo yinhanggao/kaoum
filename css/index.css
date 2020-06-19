@@ -36,6 +36,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.tw {
+  margin: 0 0 50px 0;
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     87deg,
     rgba(167, 167, 167, 0.5),
@@ -132,4 +141,43 @@ td p {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+/*twinfo*/
+
+.twinfo {
+  width: 60%;
+}
+.twitem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.twitem .twimg {
+  width: 55%;
+  flex-shrink: 0;
+}
+.twitem img {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+.twitem .twtxt {
+  width: 55%;
+  flex-shrink: 0;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.twitem > :first-child {
+  margin-right: -10%;
+}
+.twitem:nth-child(1) .twtxt {
+  background-color: rgba(214, 243, 168, 0.7);
+}
+.twitem:nth-child(2) .twtxt {
+  background-color: rgba(253, 204, 158, 0.7);
+}
+.twitem:nth-child(3) .twtxt {
+  background-color: rgba(170, 170, 255, 0.7);
 }
