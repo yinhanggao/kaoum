@@ -54,7 +54,7 @@ body {
 /*SVG*/
 
 svg {
-  height: 80vh;
+  height: 50vh;
 }
 
 path {
@@ -151,7 +151,7 @@ td p {
 .more {
   position: absolute;
   right: 5px;
-  bottom: 105px;
+  bottom: 5px;
   background-color: transparent;
   border-radius: 5px;
   width: 35px;
@@ -198,6 +198,7 @@ td p {
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  border-radius: 10px;
 }
 .twitem > :first-child {
   margin-right: -10%;
