@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // $("path").mouseup(function (e) {
+      //   var tagname = $(this).attr("data-name");
+      // });
+      var xhr = new XMLHttpRequest();
+      xhr.open(
+        "GET",
+        "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=CWB-5FC93907-783A-4AC3-8BC1-70D286425F47&locationName=臺南市",
+        true
+      );
+      xhr.send(null);
+      xhr.onload = function () {
+        var str = JSON.parse(xhr.responseText);
+      };
+    </script>
+  </body>
+</html>
