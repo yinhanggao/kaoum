@@ -74,6 +74,13 @@
         .main {
           width: 100%;
         }
+        .footer-item {
+          margin: 0 50px;
+        }
+      }
+      .card img {
+        vertical-align: bottom;
+        width: 100%;
       }
       .item {
         display: flex;
@@ -132,11 +139,75 @@
       .more a:hover {
         color: rgb(255, 255, 255);
       }
+      .footer {
+        width: 100%;
+        flex-wrap: wrap;
+        background-color: rgb(143, 143, 143);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer .footer-main {
+        display: flex;
+        margin: 50px 0;
+      }
+      .footer-item {
+        margin: 0 10px;
+        text-align: start;
+      }
+      .footer-item h3 {
+        border-bottom: 1.3px solid rgb(255, 255, 255);
+        padding-bottom: 10px;
+        color: rgb(255, 255, 255);
+      }
+      .footer-item a {
+        display: block;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        transition: 0.3s;
+        padding: 5px 0;
+      }
+      .footer-item a:hover {
+        color: rgb(0, 0, 0);
+      }
+      .footer-copyright {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
+      .footer-scer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 0 0;
+      }
+      .footer-scer input {
+        border-radius: 5px 0 0 5px;
+        width: 60px;
+        height: 15px;
+        border: none;
+      }
+      .footer-scer button {
+        border-radius: 0 5px 5px 0;
+        height: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      .footer-scer input,
+      .footer-scer button:focus {
+        outline: none;
+      }
+      .footer-scer button:hover {
+        background-color: rgba(128, 128, 128, 0.418);
+        color: white;
+      }
     </style>
   </head>
   <body>
     <div class="top">
-      <div class="logo"><a href="#logo">logo</a></div>
+      <div class="logo"><a href="path3.html">about</a></div>
       <div class="user">
         <a class="adash" href="#1">登入</a><a href="#2">註冊</a>
       </div>
@@ -151,25 +222,95 @@
         <li><a class="bar" id="wdmain" href="#">作品</a></li>
       </ul>
     </div>
-    <div class="main" id="main"></div>
+    <div class="main" id="main">
+      <div class="card">
+        <img src="img/card.jpg" />
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-main">
+        <div class="footer-item">
+          <h3>css練習</h3>
+          <ul>
+            <li><a href="10-img.html" target="_blank">圖片牆</a></li>
+            <li><a href="16-menu.html" target="_blank">多層次選單</a></li>
+            <li><a href="19-cat.html" target="_blank">方塊</a></li>
+            <li><a href="20-cat.html" target="_blank">標籤</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>javascript30</h3>
+          <ul>
+            <li>
+              <a
+                href="01 - JavaScript Drum Kit/index-START.html"
+                target="_blank"
+                >JavaScript Drum Kit</a
+              >
+            </li>
+            <li>
+              <a href="02 - JS and CSS Clock/index-START.html" target="_blank"
+                >JS and CSS Clock</a
+              >
+            </li>
+            <li>
+              <a href="03 - CSS Variables/index-START.html" target="_blank"
+                >CSS Variables</a
+              >
+            </li>
+            <li>
+              <a href="05 - Flex Panel Gallery/index-START.html" target="_blank"
+                >Flex Panel Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="08 - Fun with HTML5 Canvas/index-START.html"
+                target="_blank"
+                >Fun with HTML5 Canvas</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>作品</h3>
+          <ul>
+            <li><a href="weather.html" target="_blank">台灣天氣預報</a></li>
+            <li>
+              <a href="raspberry pi.pdf" target="_blank">樹莓派之物聯網應用</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>搜尋</h3>
+          <div class="footer-scer">
+            <input type="text" />
+            <button type="submit">🔍️</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">2020 &copy; kaoum</div>
+    </div>
     <script>
-      function addmain(e) {
-        var req = new XMLHttpRequest();
-        req.open(
-          "get",
-          `https://yinhanggao.github.io/kaoum/${e.target.id}.html`
-        );
-        req.onload = function (e) {
-          const main = document.querySelector("#main");
-          main.innerHTML = this.responseText;
-        };
-        req.send();
-      }
-      const nav = document.querySelectorAll(".bar");
-      console.log(nav);
-      nav.forEach((key) => {
-        key.addEventListener("click", addmain);
-      });
+      (function () {
+        function addmain(e) {
+          var req = new XMLHttpRequest();
+          req.open(
+            "get",
+            `https://yinhanggao.github.io/kaoum/${e.target.id}.html`
+          );
+          req.onload = function (e) {
+            const main = document.querySelector("#main");
+            main.innerHTML = this.responseText;
+          };
+          req.send();
+        }
+
+        const nav = document.querySelectorAll(".bar");
+        nav.forEach((key) => {
+          key.addEventListener("click", addmain);
+        });
+      })();
     </script>
   </body>
 </html>
