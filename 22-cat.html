@@ -26,6 +26,7 @@
       .item {
         display: flex;
         justify-content: center;
+
         align-items: center;
         width: 560px;
         background-color: rgba(128, 128, 128, 0.5);
@@ -52,6 +53,9 @@
         right: 0;
         width: 20px;
         height: 20px;
+      }
+      .off {
+        display: none;
       }
       a {
         text-decoration: none;
@@ -112,21 +116,14 @@
         <div class="diva"><a id="close3" href="#">X</a></div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $("#close0").click(function () {
-          $("#it0").hide(500);
-        });
-        $("#close1").click(function () {
-          $("#it1").hide(500);
-        });
-        $("#close2").click(function () {
-          $("#it2").hide(500);
-        });
-        $("#close3").click(function () {
-          $("#it3").hide(500);
-        });
+      function offitem(e) {
+        console.log(e);
+        this.classList.toggle("off");
+      }
+      let diva = document.querySelectorAll(`.diva`);
+      diva.forEach((item) => {
+        item.addEventListener("click", offitem);
       });
     </script>
   </body>

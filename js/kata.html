@@ -10,16 +10,17 @@
       // $("path").mouseup(function (e) {
       //   var tagname = $(this).attr("data-name");
       // });
+      function reques() {
+        console.log(JSON.parse(this.response));
+      }
       var xhr = new XMLHttpRequest();
+      xhr.addEventListener("load", reques);
       xhr.open(
         "GET",
         "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-089?Authorization=CWB-5FC93907-783A-4AC3-8BC1-70D286425F47&locationName=臺南市",
         true
       );
       xhr.send(null);
-      xhr.onload = function () {
-        var str = JSON.parse(xhr.responseText);
-      };
     </script>
   </body>
 </html>

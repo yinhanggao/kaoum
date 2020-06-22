@@ -10,13 +10,11 @@ $("path").mouseup(function (e) {
   xhr.send(null);
   xhr.onload = function () {
     var thisdata = JSON.parse(xhr.responseText);
-
     thisdata =
       thisdata["records"]["locations"][0]["location"][0]["weatherElement"];
     str = thisdata[7]["time"][0]["elementValue"][0]["value"];
     int = thisdata[1]["time"][0]["elementValue"][0]["value"];
     dex = thisdata[3]["time"][0]["elementValue"][0]["value"];
-
     //$('#content').append(str);
     document.getElementById("citty").innerHTML = tagname;
     document.getElementById("weath12h0").innerHTML = "☂" + str + "%";

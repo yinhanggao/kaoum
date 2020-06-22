@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      html {
+        font-family: "微軟正黑體";
+        font-weight: 500;
+      }
+      .top {
+        height: 50px;
+        width: 100%;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .top a {
+        text-decoration: none;
+        color: gray;
+      }
+      .adash::after {
+        content: " / ";
+      }
+      .banner {
+        width: 100%;
+      }
+      .banner .bannertxt {
+        width: 100%;
+        height: 50vh;
+        background-color: rgb(107, 107, 107);
+      }
+      .navbar {
+        position: sticky;
+        top: 0px;
+        width: 100%;
+      }
+      .navbar ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .navbar li {
+        width: 33.33%;
+        background-color: aquamarine;
+      }
+      .navbar li:hover {
+        background-color: rgb(230, 225, 165);
+      }
+      .navbar li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        text-align: center;
+        line-height: 3;
+        height: 50px;
+      }
+      .main {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .item {
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        width: 30%;
+        background-color: rgba(128, 128, 128, 0.5);
+        box-sizing: border-box;
+        margin: 30px;
+        border-radius: 5px;
+      }
+      .item .pic {
+        width: 50%;
+      }
+      .item .pic img {
+        width: 100%;
+        vertical-align: middle;
+      }
+      .item .txt {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 0 0 10px;
+        color: white;
+      }
+      .item h2 {
+        font-size: 32px;
+      }
+      .item p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo"><a href="#logo">logo</a></div>
+      <div class="user">
+        <a class="adash" href="#1">登入</a><a href="#2">註冊</a>
+      </div>
+    </div>
+    <div class="banner">
+      <div class="bannertxt"></div>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a class="bar" id="cssmain" href="#">css練習</a></li>
+        <li><a class="bar" id="javascriptmain" href="#">javascript30</a></li>
+        <li><a class="bar" id="wdmain" href="#">作品</a></li>
+      </ul>
+    </div>
+    <div class="main" id="main"></div>
+    <script>
+      function addmain(e) {
+        var req = new XMLHttpRequest();
+        req.open(
+          "get",
+          `https://yinhanggao.github.io/kaoum/${e.target.id}.html`
+        );
+        req.onload = function (e) {
+          const main = document.querySelector("#main");
+          main.innerHTML = this.responseText;
+        };
+        req.send();
+      }
+      const nav = document.querySelectorAll(".bar");
+      console.log(nav);
+      nav.forEach((key) => {
+        key.addEventListener("click", addmain);
+      });
+    </script>
+  </body>
+</html>
