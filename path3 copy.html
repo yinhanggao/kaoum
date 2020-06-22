@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kaoum</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/reset.css" />
     <style>
       html {
@@ -155,10 +155,7 @@
     <script>
       function addmain(e) {
         var req = new XMLHttpRequest();
-        req.open(
-          "get",
-          `https://yinhanggao.github.io/kaoum/${e.target.id}.html`
-        );
+        req.open("get", `http://127.0.0.1:5500//${e.target.id}.html`);
         req.onload = function (e) {
           const main = document.querySelector("#main");
           main.innerHTML = this.responseText;
